@@ -14,7 +14,6 @@ Take one down and pass it around, 98 bottles of beer on the wall."""
 
         assert expected == Bottles().verse(99)
 
-    @unittest.skip(reason=None)
     def test_another_verse(self):
 
         expected = """89 bottles of beer on the wall, 89 bottles of beer.
