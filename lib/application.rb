@@ -1,5 +1,0 @@
-require_relative './first_sentence'
-require_relative './second_sentence'
-require_relative './third_sentence'
-require_relative './fourth_sentence'
-require_relative './verses'
