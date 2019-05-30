@@ -1,4 +1,8 @@
 class Bottles
+  def verses(a, b)
+    a.downto(b).map {|number| verse(number)}.join("\n")
+  end
+
   def verse(number)
     <<-VERSE
 #{first_sentence(number)} of beer on the wall, #{second_sentence(number)} of beer.
