@@ -1,7 +1,10 @@
+from verse import Verse
+
+
 class Bottles:
     def verse(self, number):
-        return f"""{self.bottle_text(number).capitalize()} of beer on the wall, {self.bottle_text(number)} of beer.
-{self.action_text(number)}, {self.bottle_text(number - 1)} of beer on the wall."""
+        return f"""{self.first_sentence(number).capitalize()} of beer on the wall, {self.second_sentence(number)} of beer.
+{self.third_sentence(number)}, {self.last_sentence(number)} of beer on the wall."""
 
     def verses(self, init, final):
         verse_list = [self.verse(number) for number in range(init, final-1, -1)]
@@ -10,29 +13,14 @@ class Bottles:
     def song(self):
         return self.verses(99, 0)
 
-    def pronoun(self, number):
-        if number == 1:
-            return "it"
-        else:
-            return "one"
+    def first_sentence(self, number):
+        return Verse().first_sentence(number)
 
-    def action_text(self, number):
-        if number == 0:
-            return "Go to the store and buy some more"
-        else:
-            return f"Take {self.pronoun(number)} down and pass it around"
+    def second_sentence(self, number):
+        return Verse().second_sentence(number)
 
+    def third_sentence(self, number):
+        return Verse().third_sentence(number)
 
-
-    def bottle_text(self, number):
-        if number == 1:
-            return "1 bottle"
-        if number < 0:
-            return "99 bottles"
-        elif number == 0:
-            return "no more bottles"
-        else:
-            return f"{number} bottles"
-
-
-
+    def last_sentence(self, number):
+        return Verse().last_sentence(number)
