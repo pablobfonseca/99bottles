@@ -7,6 +7,8 @@ class Bottles:
         verse_list = [self.verse(number) for number in range(init, final-1, -1)]
         return "\n".join(verse_list)
 
+    def song(self):
+        return self.verses(99, 0)
 
     def pronoun(self, number):
         if number == 1:
