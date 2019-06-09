@@ -3,6 +3,10 @@ class Bottles:
         return f"""{self.bottle_text(number).capitalize()} of beer on the wall, {self.bottle_text(number)} of beer.
 {self.action_text(number)}, {self.bottle_text(number - 1)} of beer on the wall."""
 
+    def verses(self, init, final):
+        verse_list = [self.verse(number) for number in range(init, final-1, -1)]
+        return "\n".join(verse_list)
+
 
     def pronoun(self, number):
         if number == 1:
