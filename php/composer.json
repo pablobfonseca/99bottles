@@ -1,0 +1,19 @@
+{
+    "name": "pablobfonseca/99bottles_php",
+    "type": "project",
+    "autoload": {
+        "classmap": [
+            "src/"
+        ]
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^8.2"
+    },
+    "authors": [
+        {
+            "name": "Iago Effting",
+            "email": "iago@brainn.co"
+        }
+    ],
+    "require": {}
+}

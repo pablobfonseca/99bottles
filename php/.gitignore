@@ -1,0 +1,9 @@
+# Dependencies
+vendor/
+
+# Editor
+/.idea
+/.vscode
+
+# Tools
+.phpunit.result.cache
